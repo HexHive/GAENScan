@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GAENScan</string>
+    <string name="banner">Snoop 📡 for nearby GAEN devices.\nHexHive quality software 🐝🐝🐝</string>
+    <string name="scan">Scan</string>
+</resources>

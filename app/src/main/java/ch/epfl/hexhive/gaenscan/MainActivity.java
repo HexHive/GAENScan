@@ -42,12 +42,13 @@ public class MainActivity extends AppCompatActivity {
         scan_results = findViewById(R.id.scan_results);
         scan_results.setMovementMethod(new ScrollingMovementMethod());
 
-        scan_data = new GAENScan();
 
         // Toggle scanning
         scan_button.setOnCheckedChangeListener((compoundButton, isChecked) -> {
             if (isChecked) {
                 AsyncTask.execute(() -> {
+                    scan_data = new GAENScan();
+
                     ScanSettings ble_scan_settings = new ScanSettings.Builder().
                             setScanMode(ScanSettings.SCAN_MODE_LOW_LATENCY).
                             setCallbackType(ScanSettings.CALLBACK_TYPE_ALL_MATCHES).
